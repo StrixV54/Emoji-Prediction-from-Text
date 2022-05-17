@@ -1,4 +1,5 @@
 \env
+\myEnv
 .idea
 *.pyc
 *.pem
