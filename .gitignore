@@ -1,0 +1,11 @@
+\env
+.idea
+*.pyc
+*.pem
+.env
+\__pycache__
+\model
+\data\dev.csv
+\data\test.csv
+\data\train.csv
+\data\whole.csv
