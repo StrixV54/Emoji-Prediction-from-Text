@@ -7,7 +7,7 @@ classifier = TextClassifier.load('./model/best-model.pt')
 mapping = {
     'sad': '&#x1F61E',
     'smile': '&#x1F600',
-    'food': '&#x1F37D',
+    'food': '&#127869;&#65039;',
     'heart': '&#10084;&#65039;',
     'baseball': '&#x26be;'
 }
