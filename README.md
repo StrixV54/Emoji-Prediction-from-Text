@@ -1,4 +1,4 @@
-# Text2Emoji :relaxed:
+# Emoji-Prediction-from-text :relaxed:
 
 ![Emoji Representative](https://twistedsifter.files.wordpress.com/2015/06/the-best-text-emoticons-on-a-single-page.jpg)
 Emoji-Prediction-From-Text is a text classification model trained on 200 sentences across 5 classes, using sentiment analysis. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts. :sunglasses:
