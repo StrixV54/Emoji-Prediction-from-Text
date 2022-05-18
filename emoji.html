@@ -18,20 +18,59 @@
     .info{
      text-align: center;
     }
-    #out{
-     text-align: center; 
+    #output{
+      text-align: center;
+      flex-direction: row;
       font-family: 'roboto';
-      font-size: 25px;
+      font-size: 20px;
     }
-    
+    #output > p{
+      transform: translateY(10px);
+      text-decoration: underline;
+      display: block;
+    }
+    td,th {
+      padding: 0 20px;
+    }
+    table, td, th, tr {
+      margin: auto;
+      text-align: center;
+      font-size: 20px;
+      border: 1px solid #afafaf;
+      border-collapse:separate;
+    }
+    .emoji{
+      transform: translate(-70px,3px);
+      display: inline-block;
+      font-size: 30px;
+      padding: 8px 14px;
+      border: 1px solid #000000;
+      background: #aeced6;
+      border-radius: 50%;
+      width: fit-content;
+    }
+    .text-out{
+      padding: 8px 80px 8px 40px;
+      margin-left: 50px;
+      border-radius: 10px;
+      background: #a5dfa9;
+      border: 1px solid #000000;
+    }
   </style>
 </head>
 <body>
 <div class="container">
-<h2>Text2Emoji Demo</h2>
-<p><b>Text2Emoji</b> is a text classification model trained on <b>200 sentences across 5 classes</b>. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts.</p>
-  <p class='info'> <img src="static/emoji.png" alt="Emoji Mapping"> </p> 
-  <p></p> 
+<h2>Emoji-Prediction</h2>
+<p><b>Emoji-Prediction-From-Text</b> is a text classification model trained on <b>200 sentences across 5 classes</b>, using Sentiment Analysis. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts.</p>
+  <!-- <p class='info'> <img src="assests/emoji.png" alt="Emoji Mapping"> </p>  -->
+  <table>
+    <tr> <th>emotion</th> <th>emoji</th> </tr>
+    <tr> <td>Love</td> <td>&#10084;</td> </tr>
+    <tr> <td>Sports</td> <td>&#x26be;</td> </tr>
+    <tr> <td>Happy</td> <td>&#x1F600</td> </tr>
+    <tr> <td>Sad</td> <td>&#x1F61E</td> </tr>
+    <tr> <td>Food</td> <td>&#x1F37D</td> </tr>
+  </table>
 <br>
   <form>
     <div class="form-group">
@@ -42,9 +81,9 @@
       <button type="button" class="btn btn-success" onclick="emojify()">Emojify</button>
     </div>
   </form><br><br>
-
-  <div class="output">
-    <p id='out'></p>
+  <div id="output">
+    <!-- <p>Output</p> 
+    <span class="text-out">hello</span><span class="emoji">😀</span> -->
   </div>
   
 </div>
@@ -62,9 +101,10 @@
         data: dataString,
         success: function(resp) {
           if (resp.length===0){
-            document.getElementById('out').innerHTML = 'Not Found!'
+            document.getElementById('output').innerHTML = 'No response from Server.'
           }else{
-            document.getElementById('out').innerHTML = document.getElementById('comment').value + ' ' + resp;
+            res=`<span class="text-out">`+document.getElementById('comment').value + '</span>\t' + `<span class="emoji">`+resp+`</span>`;
+            document.getElementById('output').innerHTML = `<p>Output</p>`+res;
           }
           
         }
