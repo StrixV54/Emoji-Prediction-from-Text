@@ -15,7 +15,7 @@ Note:Used Python 3.7 specifically.
 
 ## Methodology
 
-![Flair Internal](https://github.com/StrixV54/Emoji-Prediction-from-Text/assets/flair_internal1.png)
+![Flair Internal](https://github.com/StrixV54/Emoji-Prediction-from-Text/blob/main/assets/flair_internal1.png)
 
 ## Model Architecture
 
