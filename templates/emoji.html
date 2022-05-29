@@ -55,6 +55,18 @@
       background: #d8eed9;
       border: 1px solid #000000;
     }
+    .g-col-4{
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 35px;
+      border: solid 1px #000000;
+      background-color: aliceblue;
+      border-radius: 15px;
+      transition:all 0.4s ease-out;
+    }
+    .emo{
+      font-size: 25px;
+    }
   </style>
 </head>
 <body>
@@ -63,14 +75,26 @@
 <p><b>Emoji-Prediction-From-Text</b> is a text classification model trained on <b>200 sentences across 5 classes</b>, using Sentiment Analysis. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts.</p>
   <!-- <p class='info'> <img src="assests/emoji.png" alt="Emoji Mapping"> </p>  -->
   <br><br>
-  <table>
+  <!-- <table>
     <tr> <th>emotion</th> <th>emoji</th> </tr>
     <tr> <td>Love</td> <td>&#10084;&#65039;</td> </tr>
     <tr> <td>Sports</td> <td>&#x26be;</td> </tr>
     <tr> <td>Happy</td> <td>&#x1F600</td> </tr>
     <tr> <td>Sad</td> <td>&#x1F61E</td> </tr>
     <tr> <td>Food</td> <td>&#127869;&#65039;</td> </tr>
-  </table>
+  </table> -->
+  <div class="grid">
+    <div class="g-col-4"> Love &ThickSpace;<span class="emo">&#10084;&#65039;</span></div>
+    <div class="g-col-4"> Sad &ThickSpace;<span class="emo">&#128546;</span></div>
+    <div class="g-col-4"> Food &ThickSpace;<span class="emo">&#127869;&#65039;</span></div>
+    <div class="g-col-4"> Sports &ThickSpace;<span class="emo">&#x26be;</span></div>
+    <div class="g-col-4"> Happy &ThickSpace;<span class="emo">&#x1F600</span></div>
+    <div class="g-col-4"> afraid &ThickSpace;<span class="emo">&#128561;</span></div>
+    <div class="g-col-4"> angry &ThickSpace;<span class="emo">&#128530</span></div>
+    <div class="g-col-4"> excited &ThickSpace;<span class="emo">&#129321;</span></div>
+    <div class="g-col-4"> depressed &ThickSpace;<span class="emo">&#128534;</span></div>
+    <div class="g-col-4"> hate &ThickSpace;<span class="emo">&#128545;</span></div>
+  </div>
 <br><br>
   <form>
     <div class="form-group">
