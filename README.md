@@ -1,7 +1,7 @@
 # Emoji-Prediction-from-text :relaxed:
 
 ![Emoji Representative](https://twistedsifter.files.wordpress.com/2015/06/the-best-text-emoticons-on-a-single-page.jpg)
-Emoji-Prediction-From-Text is a text classification model trained on 200 sentences across 5 classes, using sentiment analysis. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts. :sunglasses:
+Emoji-Prediction-From-Text is a text classification model trained on 800 sentences across 10 classes, using sentiment analysis. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts. :sunglasses:
 
 ## Steps to Run
 
@@ -40,14 +40,17 @@ Model: "TextClassifier(
           (decoder): Linear(in_features=2048, out_features=300, bias=True)
         )
       )
-      (list_embedding_3): ELMoEmbeddings(model=elmo-medium)
+      (list_embedding_3): ELMoEmbeddings(model=3-elmo-medium-all)
     )
     (word_reprojection_map): Linear(in_features=5732, out_features=256, bias=True)
-    (rnn): LSTM(256, 512)
+    (rnn): LSTM(256, 512, batch_first=True, bidirectional=True)
     (dropout): Dropout(p=0.5, inplace=False)
   )
-  (decoder): Linear(in_features=512, out_features=5, bias=True)
+  (decoder): Linear(in_features=2048, out_features=11, bias=True)
   (loss_function): CrossEntropyLoss()
+  (beta): 1.0
+  (weights): None
+  (weight_tensor) None
 )"
 ```
 
